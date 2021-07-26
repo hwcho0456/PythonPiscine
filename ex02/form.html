@@ -1,0 +1,60 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- form.html                                          :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: hcho <hcho@student.42seoul.kr>             +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2021/05/24 16:00:50 by hcho              #+#    #+#            -->
+<!-- Updated: 2021/05/24 16:00:52 by hcho             ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="firstname">Firstname : </label>
+            <input type="text" id="firstname">
+        </div>
+        <div>
+            <label for="name">Name : </label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="age">Age : </label>
+            <input type="number" id="age">
+        </div>
+        <div>
+            <label for="phone">Phone : </label>
+            <input type="tel" id="phone">
+        </div>
+        <div>
+                <label for="email">Email : </label>
+                <input type="email" id="email">
+        </div>
+        <div>
+            <label for="student">Student at 42 ? : </label>
+            <input type="checkbox" id="student">
+         </div>
+        <div>
+            <label for="gender_male">Male : </label>                
+            <input type="radio" id="gender_male" name="gender">
+            <label for="gender_female">Female : </label>                
+            <input type="radio" id="gender_female" name="gender">
+            <label for="gender_other">Other : </label>                
+            <input type="radio" id="gender_other" name="gender">
+        </div>
+        <div>
+            <button onclick="displayFormContents();">Run that sexy Javascript!</button>
+        </div>
+    </form>
+</body>
+</html>
