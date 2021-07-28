@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{title}</title>
+</head>
+<body>
+    <p>"-Who are you?
+    {name}{surname}!"</p>
+    <p>"-How old are you?
+    {age}!"</p>
+    <p>"-What is your profession?
+    {profession}!"</p>
+</body>
+</html>

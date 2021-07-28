@@ -35,34 +35,47 @@ def periodic_table():
             filename.close()
             exit()
         else:
-            fam = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII"]
-            form = "<style> \
-                    {margin:0;padding:0;box-sizing:border-box;} \
-                    body{margin:0 auto;width:100%;} \
-                    ul{padding-left:0px;text-align:center;} \
-                    li{list-style:none;font-size:14px;} \
-                    table{margin:0 auto; border-collapse:collapse;} \
-                    td{min-width:120px;border:1px solid black;padding:5px;} \
-                    .nonmetal{background-color:#e7ff8f;} \
-                    .noble{background-color:#c0ffff} \
-                    .alkali{background-color:#ff6666;} \
-                    .earth{background-color:#ffdead;} \
-                    .transit{background-color:#ffc0c0;} \
-                    .post{background-color:#cccccc;} \
-                    .metalloid{background-color:#cccc99;} \
-                    .none{background-color:#eeeeee;} \
-                    .dummy{border:0;} \
-                    .left{min-width:10px;text-align:center;border:0;} \
-                    h1{text-align: left; font-size:40px; margin: 20px 120px;} \
-                    h4{text-align: center;font-size:36px;margin:0px;padding: 0px;} \
-                    h5{text-align: left;font-size:20px;margin:0px;padding:0px;} \
-                    .top{text-align: center; border:0;} \
-                    </style> \
-                    <h1>Periodic Table</h1> \
-                    <table><tr>"
+            fam = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII"]
+            form = ("<!DOCTYPE html>\n" +
+                    "<html lang=\"en\">" +
+                    "<head>\n" +
+                    "   <meta charset=\"UTF-8\">\n" +
+                    "   <title>Periodic_Table</title>\n" +
+                    "   <style>\n" +
+                    "       *{margin:0;padding:0;box-sizing:border-box;}\n" + 
+                    "       body{margin:0 auto;width:100%;}\n" +
+                    "       ul{padding-left:0px;text-align:center;}\n" +
+                    "       li{list-style:none;font-size:14px;}\n" +
+                    "       table{margin:0 auto; border-collapse:collapse;}\n" +
+                    "       td{min-width:150px;border:1px solid black;padding:5px;}\n" +
+                    "       .nonmetal{background-color:#e7ff8f;}\n" +
+                    "       .noble{background-color:#c0ffff}\n" +
+                    "       .alkali{background-color:#ff6666;}\n" +
+                    "       .earth{background-color:#ffdead;}\n" +
+                    "       .transit{background-color:#ffc0c0;}\n" +
+                    "       .post{background-color:#cccccc;}\n" +
+                    "       .metalloid{background-color:#cccc99;}\n" +
+                    "       .none{background-color:#eeeeee;}\n" +
+                    "       .top{text-align: center; border:0;}\n" +
+                    "       .dummy{border:0;}\n" +
+                    "       .left{min-width:30px;border:0;padding:20px;}\n" +
+                    "       h1{font-size:40px; margin: 20px 80px;}\n" +
+                    "       h4{text-align: center;font-size:36px;}\n" +
+                    "       h5{font-size:20px;}\n" +
+                    "   </style>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "   <h1>Periodic Table</h1>\n" +
+                    "   <table>\n" +
+                    "       <tr>\n" +
+                    "          <td class=\"left\">\n" +
+                    "              <h2></h2>\n" +
+                    "          </td>\n")
             for i in fam:
-                form += "<td class=\"top\"><h2>"+i+"</h2></td>"
-            form += "</tr>"
+                form += ("          <td class=\"top\">\n" +
+                         "              <h2>"+i+"</h2>\n" +
+                         "          </td>\n")
+            form += "       </tr>\n"
             pos = 0
             per = 1
             for element in elements:
@@ -82,25 +95,30 @@ def periodic_table():
                 if int(element[2]) >= 109 and int(element[2]) != 112:
                     kind = 'non'
                 if pos == 0:
-                    form += "<tr><td class=\"left\"><h2>"+str(per)+"</h2></td>"
+                    form += ("      <tr>\n" + 
+                             "          <td class=\"left\">\n" +
+                             "              <h2>"+str(per)+"</h2>\n" +
+                             "          </td>\n")
                     per += 1
                 while int(element[1]) != pos:
-                    form += "<td class=\"dummy\"></td>"
+                    form += ("          <td class=\"dummy\"></td>\n")
                     pos += 1
-                form += "<td class=\""+kind+"\"> \
-                            <h5>"+element[2]+"</h5> \
-                            <h4>"+element[3]+"</h4> \
-                            <ul> \
-                                <li style=\"font-size:20px;\">"+element[0]+"</li> \
-                                <li style=\"font-size:16px;\">"+element[4]+"</li> \
-                                <li>"+element[5]+"</li> \
-                            </ul> \
-                        </td>"
+                form += ("          <td class=\""+kind+"\">\n" +
+                         "              <h5>"+element[2]+"</h5>\n" +
+                         "              <h4>"+element[3]+"</h4>\n" +
+                         "              <ul>\n" +
+                         "                  <li style=\"font-size:20px;\">"+element[0]+"</li>\n" +
+                         "                  <li style=\"font-size:16px;\">"+element[4]+"</li>\n" +
+                         "                  <li>"+element[5]+"</li>\n" +
+                         "              </ul>\n" +
+                         "          </td>\n")
                 pos += 1
                 if pos == 18:
                     pos = 0
-                    form += "</tr>"
-            form += "</table>"
+                    form += "       </tr>\n"
+            form += ("  </table>\n" +
+                     "</body>\n" +
+                     "</html>")
             html.write(form)
             html.close()
 
