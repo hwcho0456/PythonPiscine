@@ -81,19 +81,19 @@ def periodic_table():
             for element in elements:
                 kind = "post"
                 if int(element[1]) <= 10:
-                    kind = 'transit'
+                    kind = "transit"
                 if int(element[1]) == 0:
-                    kind = 'alkali'
+                    kind = "alkali"
                 if int(element[1]) == 1:
-                    kind = 'earth'
-                if int(element[2]) == 1 or (int(element[1])-per <= 16 and int(element[1])-per >= 10):
-                    kind = 'nonmetal'
-                if int(element[2]) == 32 or int(element[2]) == 51 or int(element[1])-per == 9:
-                    kind = 'metalloid'
+                    kind = "earth"
+                if int(element[2]) == 1 or (int(element[1]) - per <= 16 and int(element[1]) - per >= 10):
+                    kind = "nonmetal"
+                if int(element[2]) == 32 or int(element[2]) == 51 or int(element[1]) - per == 9:
+                    kind = "metalloid"
                 if int(element[1]) == 17:
-                    kind = 'noble'
+                    kind = "noble"
                 if int(element[2]) >= 109 and int(element[2]) != 112:
-                    kind = 'non'
+                    kind = "non"
                 if pos == 0:
                     form += ("      <tr>\n" + 
                              "          <td class=\"left\">\n" +
