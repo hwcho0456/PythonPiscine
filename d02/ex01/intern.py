@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class Intern:
     def __init__(self, Name = "My name? I’m nobody, an intern, I have no name."):
         self.Name = Name
