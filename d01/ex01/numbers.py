@@ -5,10 +5,9 @@ def numbers():
         filename = open("numbers.txt", 'r')
     except:
         exit()
-    else:
-        for i in filename.readline().rstrip("\n").split(","):
-            print(i)
-        filename.close()
+    for i in filename.readline().rstrip("\n").split(","):
+        print(i)
+    filename.close()
 
 if __name__ == '__main__':
     numbers()

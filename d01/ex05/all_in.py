@@ -25,12 +25,12 @@ def all_in(*args):
             continue
         elif name in states:
             if states.get(name) in capital_cities:
-                print(capital_cities.get(states.get(name)), "is the capital of", name, end="\r\n")
+                print(capital_cities.get(states.get(name)), "is the capital of", name)
         elif name in reverse_capital_cities:
             if reverse_capital_cities.get(name) in reverse_states:
-                print(name, "is the capital of", reverse_states.get(reverse_capital_cities.get(name)), end="\r\n")
+                print(name, "is the capital of", reverse_states.get(reverse_capital_cities.get(name)))
         else:
-            print(string.strip(), "is neither a capital city nor a state", end="\r\n")
+            print(string.strip(), "is neither a capital city nor a state")
 
 if __name__ == '__main__':
     all_in(*sys.argv)

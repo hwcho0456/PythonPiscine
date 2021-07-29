@@ -6,9 +6,9 @@
 #    By: hcho <hcho@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/24 13:44:25 by hcho              #+#    #+#              #
-#    Updated: 2021/05/24 15:13:21 by hcho             ###   ########.fr        #
+#    Updated: 2021/07/26 16:02:54 by hcho             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/sh
-curl -s -I $@ | grep Location | cut -f 2 -d ' '
+curl -s -I $@ | grep "Location" | cut -f 2 -d ' '

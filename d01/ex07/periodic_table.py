@@ -36,6 +36,7 @@ def periodic_table():
                     "       body{margin:0 auto;width:100%;}\n" +
                     "       ul{padding-left:0px;text-align:center;}\n" +
                     "       li{list-style:none;font-size:14px;}\n" +
+                    "       li h4{font-size:20px;}\n" +
                     "       table{margin:0 auto; border-collapse:collapse;}\n" +
                     "       td{min-width:150px;border:1px solid black;padding:5px;}\n" +
                     "       .nonmetal{background-color:#e7ff8f;}\n" +
@@ -59,7 +60,6 @@ def periodic_table():
                     "   <table>\n" +
                     "       <tr>\n" +
                     "          <td class=\"left\">\n" +
-                    "              <h2></h2>\n" +
                     "          </td>\n")
             for i in fam:
                 form += ("          <td class=\"top\">\n" +
@@ -95,9 +95,9 @@ def periodic_table():
                     pos += 1
                 form += ("          <td class=\""+kind+"\">\n" +
                          "              <h5>"+element[2]+"</h5>\n" +
-                         "              <h4>"+element[3]+"</h4>\n" +
+                         "              <li>"+element[3]+"</h4>\n" +
                          "              <ul>\n" +
-                         "                  <li style=\"font-size:20px;\">"+element[0]+"</li>\n" +
+                         "                  <li style=\"font-size:20px;\"><h4>"+element[0]+"</h4></li>\n" +
                          "                  <li style=\"font-size:16px;\">"+element[4]+"</li>\n" +
                          "                  <li>"+element[5]+"</li>\n" +
                          "              </ul>\n" +
