@@ -1,5 +1,5 @@
 #!/bin/sh
 
-virtualenv --python=python3 django_venv; source django_venv/bin/activate
-pip -V
+python3 -m venv Django
+source Django/bin/activate
 pip install --force-reinstall -r requirement.txt
