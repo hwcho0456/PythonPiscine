@@ -1,0 +1,20 @@
+
+{% extends 'ex02/base.html' %} 
+
+{% block title %}
+<title>Exercise 02: First form</title>
+{% endblock title %}  
+
+{% block form %}
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock form %}
+
+{% block history %}
+{% for x in history %}
+    {{x}}<br />
+{% endfor %}
+{% endblock history%}

@@ -1,0 +1,54 @@
+{% extends 'ex01/base.html' %} 
+
+{% block title %}
+<title>Ex01: Display process of a static page.</title>
+{% endblock title %} 
+
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'ex01/css/style1.css' %}">
+{% endblock style %} 
+
+{% block content %}
+<div class="content">
+  <table style="width: 90%">
+    <tbody>
+      <tr>
+        <td>Static Web Page</td>
+      </tr>
+      <tr>
+        <td>
+          1. In static web pages, Pages will remain same until someone changes it
+          manually.
+        </td>
+      </tr>
+      <tr>
+        <td>2. Static Web Pages are simple in terms of complexity.</td>
+      </tr>
+      <tr>
+        <td>3. In static web pages, Information are change rarely.</td>
+      </tr>
+      <tr>
+        <td>
+          4. Static Web Page takes less time for loading than dynamic web page.
+        </td>
+      </tr>
+      <tr>
+        <td>5. In Static Web Pages, database is not used.</td>
+      </tr>
+      <tr>
+        <td>
+          6. Static web pages are written in languages such as: HTML, JavaScript,
+          CSS, etc.
+        </td>
+      </tr>
+      <tr>
+        <td>7. Static web pages does not contain any application program .</td>
+      </tr>
+      <tr>
+        <td>8. Static web pages require less work and cost in designing them.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock content %}
